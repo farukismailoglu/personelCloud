@@ -5,6 +5,10 @@ root kullanici yetkisi almak icin
 ```
 sudo su
 ```
+Rasperry pi 3 guncellestirmelerinin yapilmasi
+```
+apt update  && apt  upgrade
+```
 
 ## Gerekli paketlerin kurulumu
 ```
@@ -16,29 +20,35 @@ apt install -y apache2 mariadb-server libapache2-mod-php7.0 \
     php7.0-intl php7.0-mcrypt php-imagick \
     php7.0-zip php7.0-xml php7.0-mbstring
 ```
+Apache sunucusunun baslatilmasive onyuklenebilir hale getirilmesi
 ```
 systemctl start apache2
 
 systemctl enable apache2
 ```
-```
-tar -xvf owncloud-10.0.10.tar.bz2
-
-chown -R www-data:www-data owncloud
-```
-```
-mv owncloud /var/www/html/
-
-```
-```
-cd
-```
-
+owncloud 10 yailiminin indirilmesi
 ```
 cd /tmp
 
 wget https://download.owncloud.org/community/owncloud-10.0.10.tar.bz2
 ```
+Indirilen oxncloud yazilimini arsicden cikarilmasi
+```
+tar -xvf owncloud-10.0.10.tar.bz2
+
+chown -R www-data:www-data owncloud
+```
+Olusturulan owncloud klasorunun tasinmasi
+```
+mv owncloud /var/www/html/
+
+```
+Ana dizinde geri donus
+```
+cd
+```
+
+
 ## Owncloud indirilmesi ve kurulmasi
 ```
 cd /tmp

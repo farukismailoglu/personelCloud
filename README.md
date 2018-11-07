@@ -5,10 +5,10 @@ Raspberry pi 3 uzerinde Owncloud 10 yazilimi kullanilarak kisisel bulut depolama
 
 
 ## Gerekli Donanım Listesi
-Raspbian Stretch yuklu Raspberry pi 3
-Micro SD Card(En az 8 GB)
-Power Supply
-Harddisk
+* Raspbian Stretch yüklü raspberry pi 3
+* Micro SD Card(En az 8 GB)
+* Power Supply
+* Harddisk
 
 ## KURULUM AŞAMALARI
 
@@ -35,6 +35,7 @@ apt install -y apache2 mariadb-server libapache2-mod-php7.0 \
 ```
 
 ## owncloud 10 yazılımını indirilmesi ve kurulma aşamaları
+
 /tmp konumuna Owncloud  yazılımının indirilmesi
 ```
 cd /tmp

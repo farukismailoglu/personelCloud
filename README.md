@@ -171,3 +171,16 @@ Sistem başladıktan sonra depolama alanını kontrol ediyoruz
 ```
 sudo ls / media / ownclouddrive
 ```
+## Owncloud Ayarlarının Tamamlanması
+
+Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcısını açarak  `192.168.1.36/owncloud ` adresi gidilmeli,  ardından açılan owncloud arayüzünde gerekli alanlar doldurulmalı
+
+- Yönetici kullanıcı adı ve parola 
+- Data folder alanına `media / ownclouddrive`
+- Veritabanı için gerekli alanları veritabanı oluştururken girdiğimiz değerleri girin
+* Username: owncloud
+* Password: 12345
+* Database: owncloud
+* Server: localhost
+
+`Finish setup` butonuna  tıklayarak ayarlamaları bitiriyoruz

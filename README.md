@@ -118,3 +118,56 @@ MariaDB [(none)]> flush privileges;
 MariaDB [(none)]> exit;
  Bye
 ```
+## Harici  Harddisk takılması
+Harici Harddisk için gerekli ntfs paketinin kurulumu
+```
+sudo apt-get install ntfs-3g -y
+```
+Verilerin depolanacağı alanın oluşturulması
+```
+sudo mkdir /media/ownclouddrive
+```
+
+```
+sudo groupadd www-data
+sudo usermod -a -G www-data www-data
+```
+İzinler ile alakalı kısım
+```
+sudo chown -R www-data:www-data /media/ownclouddrive
+sudo chmod -R 775 /media/ownclouddrive
+```
+Harddiskin farklı usb portlarından takılabildığında da tanınabilmesi için gerekli kısımlar
+```
+id -g www-data
+```
+```
+id -u www-data
+```
+```
+ls -l /dev/disk/by-uuid
+```
+```
+sudo nano /etc/fstab
+
+```
+```
+UUID=F6941E59941E1D25 /media/ownclouddrive auto nofail,uid=33,gid=33,umask=0027,dmask=0027,noatime 0 0
+
+```
+Raspberry nin yeniden baslatılması
+```
+sudo reboot
+
+```
+```
+sudo ls /media/ownclouddrive
+```
+```
+sudo ls /media/ownclouddrive
+
+```
+Sistem başladıktan sonra depolama alanını kontrol ediyoruz
+```
+sudo ls / media / ownclouddrive
+```

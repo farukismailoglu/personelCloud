@@ -160,13 +160,7 @@ Raspberry nin yeniden baslatılması
 sudo reboot
 
 ```
-```
-sudo ls /media/ownclouddrive
-```
-```
-sudo ls /media/ownclouddrive
 
-```
 Sistem başladıktan sonra depolama alanını kontrol ediyoruz
 ```
 sudo ls / media / ownclouddrive
@@ -176,7 +170,7 @@ sudo ls / media / ownclouddrive
 Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcısını açarak  `192.168.1.36/owncloud ` adresi gidilmeli,  ardından açılan owncloud arayüzünde gerekli alanlar doldurulmalı
 
 - Yönetici kullanıcı adı ve parola 
-- Data folder alanına `media / ownclouddrive`
+- Data folder alanına `/media/ownclouddrive`
 - Veritabanı için gerekli alanları veritabanı oluştururken girdiğimiz değerleri girin
 * Username: owncloud
 * Password: 12345

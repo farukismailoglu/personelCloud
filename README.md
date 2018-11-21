@@ -137,7 +137,7 @@ sudo usermod -a -G www-data www-data
 sudo chown -R www-data:www-data /media/ownclouddrive
 sudo chmod -R 775 /media/ownclouddrive
 ```
-Harddiskin farklı usb portlarından takılabildığında da tanınabilmesi için gerekli kısımlar
+Harddiskin farklı usb portlarından takılabildiğinde de tanınabilmesi için gerekli kısım
 ```
 id -g www-data
 ```
@@ -151,6 +151,7 @@ ls -l /dev/disk/by-uuid
 sudo nano /etc/fstab
 
 ```
+Yukarıdaki komutlardan elde edilen bilgiler aşağıdaki komut satırındaki yerlere yazılarak tamamlanır.
 ```
 UUID=F6941E59941E1D25 /media/ownclouddrive auto nofail,uid=33,gid=33,umask=0027,dmask=0027,noatime 0 0
 
@@ -161,13 +162,10 @@ sudo reboot
 
 ```
 
-Sistem başladıktan sonra depolama alanını kontrol ediyoruz
-```
-sudo ls / media / ownclouddrive
-```
+
 ## Owncloud Ayarlarının Tamamlanması
 
-Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcısını açarak  `192.168.1.36/owncloud ` adresi gidilmeli,  ardından açılan owncloud arayüzünde gerekli alanlar doldurulmalı
+Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcısını açarak  `ip_adresiniz/owncloud ` adresi gidilmeli,  ardından açılan owncloud arayüzünde gerekli alanlar doldurulmalı
 
 - Yönetici kullanıcı adı ve parola 
 - Data folder alanına `/media/ownclouddrive`

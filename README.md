@@ -16,7 +16,7 @@ root kullanici yetkisi almak icin
 ```
 sudo su
 ```
-Rasperry pi 3 guncellestirmelerinin yapilmasi
+Rasperry pi 3 güncelleştirmelerinin yapılması
 ```
 apt update  && apt  upgrade
 ```
@@ -34,7 +34,7 @@ apt install -y apache2 mariadb-server libapache2-mod-php7.0 \
     php7.0-zip php7.0-xml php7.0-mbstring
 ```
 
-## owncloud 10 yazılımını indirilmesi ve kurulma aşamaları
+## Owncloud 10 yazılımının indirilmesi ve kurulum aşamaları
 
 /tmp konumuna Owncloud  yazılımının indirilmesi
 ```
@@ -48,17 +48,17 @@ tar -xvf owncloud-10.0.10.tar.bz2
 
 chown -R www-data:www-data owncloud
 ```
-Olusturulan Owncloud klasörünün taşınması
+Oluşturulan Owncloud klasörünün taşınması
 ```
 mv owncloud /var/www/html/
 ```
 
-Ana dizinde geri donus
+Ana dizin geri dönüş
 ```
 cd
 ```
 
-Apache sunucusunun baslatilmasive onyuklenebilir hale getirilmesi
+Apache sunucusunun baslatılması ve önyüklenebilir hale getirilmesi
 ```
 systemctl start apache2
 
@@ -67,7 +67,7 @@ systemctl enable apache2
 
 
 ## Apache Web Server Yapılandırma
-Aşagıda ki komut ile yeni bir yapılandırma dosyası oluşturma
+Aşağıda ki komut ile yeni bir yapılandırma dosyası oluşturma
 ```
 sudo nano /etc/apache2/sites-available/owncloud.conf
 ```
@@ -155,7 +155,7 @@ sudo nano /etc/fstab
 UUID=F6941E59941E1D25 /media/ownclouddrive auto nofail,uid=33,gid=33,umask=0027,dmask=0027,noatime 0 0
 
 ```
-Raspberry nin yeniden baslatılması
+Raspberry'nin yeniden başlatılması
 ```
 sudo reboot
 

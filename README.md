@@ -1,8 +1,8 @@
 # KİŞİSEL BULUT DEPOLAMA
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/ownloud.png "owncloud server bilesen diyagrami")
+
 ## Projenin Amaci
-
 Raspberry pi 3 uzerinde Owncloud 10 yazilimi kullanilarak kisisel bulut depolama alani olusturmak.
-
 
 ## Gerekli Donanım Listesi
 * Raspbian Stretch yüklü raspberry pi 3

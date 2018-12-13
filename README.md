@@ -8,6 +8,8 @@ Projeyi yapma amacım kişisel verilerimin google drive, yandex disk ve benzeri 
 ## Proje Hakkinda 
 Projeyi yaparken de maliyet ve tasarruf acısından daha iyi olan raspberry pi 3 ve acik kaynakli 'owncloud' yazilimini kullandim. Depolama olarak ise 1 TB harici harddisk kullanarak 1 TB depolama alanina sahip oldum. Sizde ihtiyacınıza göre depolama alanları kullanarak düşük maliyetlerle kişisel bulut depolama alanlanınıza sahip olabilirsiniz. Ayrıca owncloud ücretli ve ücretsiz eklentilerle ek ozellikler ekleyebilirsiniz. Birden fazla kullanıcı oluşturarak kullanmalarına izin verdiklerinizde kişisel bulut depolama alanınıza kullanabilirler. 
 
+Owncloud için yapılmış client uygulamaları sayesinde neredeyse bütün cihazlardan veri sekronize edebilir ve istediğiniz cihazdan erişebilirsiniz.
+
 Ayrıca owncloud'un  Türkçe dil desteği olduğunuda bildirmek isterim.
 
 Projemde Raspberry pi 3b+ kullandım ama araştırmalarım sonucunda  raspberry pi 2 ninde desteklediğini öğrendim lakin denemedim.
@@ -217,7 +219,13 @@ Ayrica aşağıda verdiğim link ile owncloud istemcilerinin indirme sayfasına 
 
 [Owncloud Client Download](https://owncloud.org/download/#install-clients)
 
+## Owncloud Mobile Indirme QR Kod
+
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/mobileDownload.png "mobile QR Kode")
+
 ## Windows Uygulaması Uzerinden baglanma 
-İndirme sayfasındaki uygulama kurulduktan sonra gelen ekranda `Server Adrees ` bölümüne aşagıdaki resimde belirttiğm gibi owncloud adresinizi yazarak ownclouda bağlanıyoruz.
+İndirme sayfasındaki uygulama kurulduktan sonra gelen ekranda `Server Address ` bölümüne aşagıdaki resimde belirttiğm gibi owncloud adresinizi yazarak ownclouda bağlanıyoruz.
 
 ![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/winclient.png "windows client")
+
+Desteklenen diğer platformlarda da aynı şekilde giriş yaparak verilerinizi sekronize edebilir ve verilerinize herhangi bir cihazdan ulaşabilirsiniz.

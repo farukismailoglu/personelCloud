@@ -1,14 +1,27 @@
 # KİŞİSEL BULUT DEPOLAMA
 ![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/ownloud.png "owncloud server bilesen diyagrami")
 
-## Projenin Amaci
-Raspberry pi 3 uzerinde Owncloud 10 yazilimi kullanilarak kisisel bulut depolama alani olusturmak.
+## Projenin Amacı
+Projeyi yapma amacım kişisel verilerimin google drive, yandex disk ve benzeri bulut depolama alanlarında bulundurmak yerine kendi sunucum üzerinde bulundurmak. Böylece kişisel verilerimin güvenliğini arttırmakdır.
+
+
+## Proje Hakkinda 
+Projeyi yaparken de maliyet ve tasarruf acısından daha iyi olan raspberry pi 3 ve acik kaynakli 'owncloud' yazilimini kullandim. Depolama olarak ise 1 TB harici harddisk kullanarak 1 TB depolama alanina sahip oldum. Sizde ihtiyacınıza göre depolama alanları kullanarak düşük maliyetlerle kişisel bulut depolama alanlanınıza sahip olabilirsiniz. Ayrıca owncloud ücretli ve ücretsiz eklentilerle ek ozellikler ekleyebilirsiniz. Birden fazla kullanıcı oluşturarak kullanmalarına izin verdiklerinizde kişisel bulut depolama alanınıza kullanabilirler. 
+
+Ayrıca owncloud'un  Türkçe dil desteği olduğunuda bildirmek isterim.
+
+Projemde Raspberry pi 3b+ kullandım ama araştırmalarım sonucunda  raspberry pi 2 ninde desteklediğini öğrendim lakin denemedim.
+Bu projeyi yapmak  için Raspberry alacak iseniz üzerinde dahili wifi modeli bulunan raspberry pi 3b+ modelinin alınmasını öneririm.
+
+Projeyi sanal makine üzerinde Raspbean işletim sisteminde ip ayarlamaları sebebiyle çalıştıramadım.
+
+
 
 ## Gerekli Donanım Listesi
-* Raspbian Stretch yüklü raspberry pi 3
+* Raspbian Stretch yüklü raspberry pi 3/2
 * Micro SD Card(En az 8 GB)
 * Power Supply
-* Harddisk
+* Harddisk (isteğe bağlı)
 
 ## KURULUM AŞAMALARI
 
@@ -89,7 +102,6 @@ SetEnv HTTP_HOME /var/www/html/owncloud
 </Directory>
 ```
 ```
-sudo su
 ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/sites-enabled/owncloud.conf
 ```
 ```
@@ -118,6 +130,11 @@ MariaDB [(none)]> flush privileges;
 MariaDB [(none)]> exit;
  Bye
 ```
+## Harici Harddisk kullanamak istemeyenler
+
+Depolama olarak harddisk kullanmak istemeyenler aşağıdaki 'Harici harddisk takilmasi 'kismini atlaayarak devam edebilir.
+Eger bunu yaparsaniz depolama alaniniz yaklasik olarak Raspberry pi 3 deki bos hafisaniz kadar olacaktir. Bunu düşünerek hafıza kartı seçilmelidir.
+
 ## Harici  Harddisk takılması
 Harici Harddisk için gerekli ntfs paketinin kurulumu
 ```
@@ -161,17 +178,27 @@ Raspberry'nin yeniden başlatılması
 sudo reboot
 
 ```
+## Ip adresinin bulunması
+Owncloud kurulumu icin ip adresimizin bulunmasi gerekmektedir.
+Terminal ekranına `ifconfig` komutu yazılır.
+Daha sonra resimde görüldüğü gibi işaretlenmiş alanda ip adresi yazmaktadır.
+
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/ip.png "ip adresinin bulunması")
 
 
 ## Owncloud Ayarlarının Tamamlanması
 
 Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcısını açarak  `ip_adresiniz/owncloud ` adresi gidilmeli,  ardından açılan owncloud arayüzünde gerekli alanlar doldurulmalı
+
 ![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/login.png "kullanıcı Adı ve Parola")
 - Yönetici kullanıcı adı ve parola 
 
 - Veritabanı için gerekli alanları veritabanı oluştururken girdiğimiz değerleri girin
+
 ![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/settings.png "database config")
+
 - Data folder alanına `/media/ownclouddrive`
+(Harddisk kullanmayacaksaniz Data Folder alanındaki kısmı degistirmeyin.)
 * Username: owncloud
 * Password: 12345
 * Database: owncloud
@@ -179,11 +206,7 @@ Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcıs
 
 `Finish setup` butonuna  tıklayarak ayarlamaları bitiriyoruz
 
-## Ip adresinin bulunması
-Terminal ekranına `ifconfig` komutu yazılır.
-Daha sonra resimde görüldüğü gibi işaretlenmiş alanda ip adresi yazmaktadır.
 
-![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/ip.png "ip adresinin bulunması")
 
 ## Owncloud'a bağlanma
 

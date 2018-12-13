@@ -166,13 +166,35 @@ sudo reboot
 ## Owncloud Ayarlarının Tamamlanması
 
 Rasperry pi üzerinden veya aynı ağa bağlı bir cihazın internet tarayıcısını açarak  `ip_adresiniz/owncloud ` adresi gidilmeli,  ardından açılan owncloud arayüzünde gerekli alanlar doldurulmalı
-
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/login.png "kullanıcı Adı ve Parola")
 - Yönetici kullanıcı adı ve parola 
-- Data folder alanına `/media/ownclouddrive`
+
 - Veritabanı için gerekli alanları veritabanı oluştururken girdiğimiz değerleri girin
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/settings.png "database config")
+- Data folder alanına `/media/ownclouddrive`
 * Username: owncloud
 * Password: 12345
 * Database: owncloud
 * Server: localhost
 
 `Finish setup` butonuna  tıklayarak ayarlamaları bitiriyoruz
+
+## Ip adresinin bulunması
+Terminal ekranına `ifconfig` komutu yazılır.
+Daha sonra resimde görüldüğü gibi işaretlenmiş alanda ip adresi yazmaktadır.
+
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/ip.png "ip adresinin bulunması")
+
+## Owncloud'a bağlanma
+
+OwnCloud kurulumu tamamlandıktan sonra cıkan ekrandan farklı platformlardan nasıl bağlanabileceği ve uygulama mağazalarında bulunan uygulamalara ulaşabilirsiniz.
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/setup.png "client apps")
+
+Ayrica aşağıda verdiğim link ile owncloud istemcilerinin indirme sayfasına gidebilirsiniz.
+
+[Owncloud Client Download](https://owncloud.org/download/#install-clients)
+
+## Windows Uygulaması Uzerinden baglanma 
+İndirme sayfasındaki uygulama kurulduktan sonra gelen ekranda `Server Adrees ` bölümüne aşagıdaki resimde belirttiğm gibi owncloud adresinizi yazarak ownclouda bağlanıyoruz.
+
+![owncloud](https://github.com/farukismailoglu5252/personelCloud/blob/master/winclient.png "windows client")
